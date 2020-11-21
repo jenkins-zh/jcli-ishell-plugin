@@ -1,0 +1,46 @@
+# Official documentation at http://goreleaser.com
+project_name: jcli-ishell-plugin
+builds:
+- env:
+  - CGO_ENABLED=0
+  binary: jcli-ishell-plugin
+  goarch:
+    - amd64
+    - arm64
+  goos:
+    - freebsd
+    - windows
+    - linux
+    - darwin
+  ignore:
+    - goos: freebsd
+      goarch: arm64
+  ldflags:
+    - -X github.com/jenkins-zh/jenkins-cli/app.version={{.Version}}
+    - -X github.com/jenkins-zh/jenkins-cli/app.commit={{.ShortCommit}}
+    - -X github.com/jenkins-zh/jenkins-cli/app.date={{.Date}}
+dist: release
+archives:
+- name_template: "{{ .Binary }}-{{ .Os }}-{{ .Arch }}"
+  replacements:
+    darwin: darwin
+    linux: linux
+    windows: windows
+    amd64: amd64
+    arm64: arm64
+  format_overrides:
+    - goos: windows
+      format: zipREADME.md
+  files:
+    -
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next-{{.ShortCommit}}"
+changelog:
+  skip: false
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
