@@ -1,0 +1,23 @@
+name: Backup Git repository
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+
+jobs:
+  BackupGit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Backup to Gitee
+      uses: jenkins-zh/git-backup-actions@v0.0.3
+      env:
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        TARGET_GIT: "git@gitee.com:jenkins-zh/jcli-ishell-plugin.git"
+    - name: Backup to CodeChina
+      uses: jenkins-zh/git-backup-actions@v0.0.4
+      env:
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        TARGET_GIT: "git@codechina.csdn.net:jenkins-zh/jcli-ishell-plugin.git"
