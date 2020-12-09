@@ -1,3 +1,9 @@
+[![](https://goreportcard.com/badge/jenkins-zh/jcli-ishell-plugin)](https://goreportcard.com/report/jenkins-zh/jcli-ishell-plugin)
+[![](http://img.shields.io/badge/godoc-reference-5272B4.svg?style=flat-square)](https://godoc.org/github.com/jenkins-zh/jcli-ishell-plugin)
+[![GitHub release](https://img.shields.io/github/release/jenkins-zh/jcli-ishell-plugin.svg?label=release)](https://github.com/jenkins-zh/jcli-ishell-plugin/releases/latest)
+![GitHub All Releases](https://img.shields.io/github/downloads/jenkins-zh/jcli-ishell-plugin/total)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jenkins-zh/jcli-ishell-plugin)
+
 # jcli-ishell-plugin
 This is a plugin for [Jenkins CLI](https://github.com/jenkins-zh/jenkins-cli/) which allows you to manage your jobs in an interactive way.
 
