@@ -9,8 +9,7 @@ require (
 	github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1 // indirect
 	github.com/fatih/color v1.10.0 // indirect
 	github.com/flynn-archive/go-shlex v0.0.0-20150515145356-3f9db97f8568 // indirect
-	github.com/jenkins-zh/jenkins-cli v0.0.32
+	github.com/jenkins-zh/jenkins-cli v0.0.35
 	github.com/mitchellh/go-homedir v1.1.0
-	golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9 // indirect
 	gopkg.in/yaml.v2 v2.4.0
 )
